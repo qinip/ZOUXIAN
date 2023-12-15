@@ -20,7 +20,7 @@ To gauge public opinion on this emerging crisis, I have amassed around 15,000 co
 
 
 ```{=html}
-<iframe src="https://zj117.shinyapps.io/comment_emo/" style="border: none; width: 800px; height: 400px"></iframe>
+<iframe src="https://zj117.shinyapps.io/comment_emo/" style="border: none; width: 800px; height: 500px"></iframe>
 
 ```
 
