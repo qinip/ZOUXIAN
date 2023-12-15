@@ -1,0 +1,105 @@
+---
+title: "voa_prep"
+format: html
+---
+
+## Code to topic modeling VOA interview transcripts
+
+```{r}
+library(readxl)
+library(quanteda)
+library(textTinyR)
+library(tm)
+library(topicmodels)
+library(RColorBrewer)
+library(udpipe)
+library(tidyverse)
+library(data.table)
+library(jsonlite)
+
+## Prepare data for plotting
+interviews <- read_excel("../data/interviews.xlsx")
+## label POS
+ud_model <- udpipe_download_model(language = "english")
+ud_model <- udpipe_load_model(ud_model$file_model)
+interviews_annotated <-  udpipe_annotate(ud_model, x = interviews$text)
+dt <- as.data.table(interviews_annotated)
+dt_filtered <- dt[upos %in% c("NOUN", "VERB")]
+corpus <- Corpus(VectorSource(dt_filtered$lemma))
+
+# Preprocessing
+corpus_clean <- tm_map(corpus, content_transformer(tolower))
+corpus_clean <- tm_map(corpus_clean, content_transformer(removePunctuation))
+corpus_clean <- tm_map(corpus_clean, content_transformer(removeNumbers))
+corpus_clean <- tm_map(corpus_clean, content_transformer(removeWords), stopwords("english"))
+
+
+# Create a document-term matrix
+dtm <- DocumentTermMatrix(corpus_clean)
+dtm <- removeSparseTerms(dtm, 0.99) 
+
+# Convert your TDM to a non-sparse format (required by LDA)
+dtm_lda <- as.DocumentTermMatrix(dtm, control = list(store = "dense"))
+# remove all-zero rows
+dtm_lda <- dtm_lda[rowSums(as.matrix(dtm_lda)) > 0, ]
+
+
+# Determine number of topics
+k <- 5  
+# Apply LDA
+lda_model <- LDA(dtm_lda, k, method = "Gibbs", control = list(seed = 42))
+
+top_terms <- terms(lda_model, 20)
+
+# Store top terms as a data frame for plotting
+top_terms_df <- data.frame(t(top_terms))
+top_terms_df$topic <- seq_len(nrow(top_terms_df))
+top_terms_df$words <- apply(top_terms_df[, -ncol(top_terms_df)], 1, paste, collapse = " ")
+top_terms_df <- top_terms_df[, c("topic", "words")]
+head(top_terms_df)
+# Save as CSV
+write.csv(top_terms_df, "../data/voa_top_terms.csv", row.names = FALSE)
+```
+
+
+```{r}
+# Prepare data for page 3
+## read in csv file
+## Read in the data from file
+comments <- read_csv("../data/all_comments_nlp.csv") %>%
+  select(user, source, polarity_subjectivity, emotion_scores) # select only the columns needed for the app
+## Get the column names
+colnames(comments)
+## Create a df for emotion score plotting
+comments$emotion_scores <- str_replace_all(comments$emotion_scores, "'", "\"")
+
+# Convert emotion_scores from JSON-like strings to lists
+comments <- comments %>%
+  mutate(emotion_scores = map(emotion_scores, ~fromJSON(.x, simplifyVector = TRUE)))
+
+# Unnest the nested emotion_scores list-column to two columns, name and value
+comments <- tidyr::unnest_wider(comments, emotion_scores)
+
+# Gather all emotions into one column and their corresponding values into another column
+# Gather all emotions into one column and their corresponding values into another column
+comments <- tidyr::pivot_longer(comments, cols = c('fear', 'anger', 'anticip', 'trust', 'surprise', 'positive', 'negative', 'sadness', 'disgust', 'joy', 'anticipation'), names_to = "emotion", values_to = "score")
+
+
+# Remove the 'emotion_scores.' prefix from the emotion names
+comments$emotion <- str_remove(comments$emotion, "emotion_scores.")
+
+# Ensure scores are numeric
+comments$score <- as.numeric(comments$score)
+
+# Group by source and emotion, then calculate average scores
+source_scores <- comments %>%
+  group_by(source, emotion) %>%
+  summarise(avg_score = mean(score, na.rm = TRUE), .groups = 'drop') 
+
+source_scores
+
+## save to a .csv file
+write_csv(source_scores, "../data/source_scores.csv")
+
+```
+

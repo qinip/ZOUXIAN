@@ -1,0 +1,19 @@
+---
+title: "WHAT IS *ZOUXIAN*?"
+about:
+  template: broadside
+  image: /rcs/zouxian1_nyt.png
+---
+
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MayDxKco3OE?si=Zy5x9EcQk0Z_hl9m&amp;start=85&end=133" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+```
+<br> </br> ***"Zouxian"*** is a Chinese term meaning "walking the line." It refers to the perilous journey undertaken by Chinese migrants through the Darién Gap, a dangerous jungle in Panama, as they attempt to reach the United States. This route is chosen by those seeking asylum due to deteriorating economic prospects and political oppression in China. The surge of Chinese migrants crossing the southern U.S. border, particularly through the [Darién Gap](https://en.wikipedia.org/wiki/Dari%C3%A9n_Gap){target="_blank"}, represents a significant shift in migration patterns. Driven by concerns over economic uncertainty and political repression in China, these migrants are undertaking a perilous journey, often guided by information shared on social media. They typically seek asylum upon arrival, citing fears of persecution in their homeland. This increase is noteworthy, as historically, Chinese migration to the U.S. has been through more conventional routes, such as education or work visas.
+
+<br> </br>
+
+**LEARN MORE**
+
+-   [NYT](https://www.nytimes.com/2023/12/03/business/darien-gap-china-immigration.html){target="_blank"}
+-   [WSJ](https://www.wsj.com/articles/determined-to-flee-china-thousands-take-a-long-dangerous-route-to-the-southern-u-s-border-73acfbe9){target="_blank"}
+-   [BBC](https://www.bbc.com/news/world-us-canada-64008633){target="_blank"}

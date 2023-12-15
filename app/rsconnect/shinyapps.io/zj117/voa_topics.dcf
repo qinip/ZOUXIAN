@@ -1,0 +1,13 @@
+name: voa_topics
+title: voa_topics
+username: zj117
+account: zj117
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10802184
+bundleId: 8051436
+url: https://zj117.shinyapps.io/voa_topics/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData

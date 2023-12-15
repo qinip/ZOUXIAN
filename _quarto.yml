@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Walk the Route: The Rising Wave of Chinese Migrants at the U.S. Southern Border"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: p1.qmd
+        text: The Start
+      - href: p2.qmd
+        text: The Destination
+      - href: p3.qmd
+        text: The Repercussions
+
+format:
+  html:
+    theme:
+       dark: cyborg
+       light: flatly
+    css: styles.css
+    toc: true
+
+
+

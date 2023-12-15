@@ -1,0 +1,32 @@
+---
+title: "The Repercussions"
+---
+
+## Raising Concerns
+n 2023, the United States witnessed a disconcerting surge in Chinese migrants crossing the border. While the influx began in 2022 and secured some media spotlight in March and April of that year, the staggering rise did not stir widespread concern until later. 
+
+In September, Senator Roger Marshall, along with several fellow Republicans, spotlighted the issue. They issued [an open letter](https://www.marshall.senate.gov/newsroom/press-releases/sen-marshall-leads-letter-to-dhs-demanding-answers-on-chinese-nationalist-crossing-through-our-southern-border/){target="_blank"} to the Department of Homeland Security (DHS) demanding responses, citing national security fears.
+
+The issue of Chinese migrants crossing the U.S. border truly entered public consciousness only in the recent month, specifically in late November and early December. The escalating crisis triggered by the overall surge of border crosser, coupled with the Republicans' heightened emphasis on border security in Congress and presidential primary campaigns, have prompted influential outlets like The New York Times to publish two special report articles on the issue within a week. As depicted in the provided graphic, the topic has also become a hotspot in Google searches. This sudden surge in public interest and media coverage has placed the spotlight on not only the immediate situation at the border, but also on its potential repercussions on Chinese migrants and Chinese residents in the U.S. alike.
+
+![](rcs/gg.png){width=60%}
+
+As tension heightens in the international relations between the US and China, punctuated by high-profile incidents such as the spy balloon saga and repeated military provocations, public sentiment towards this growing phenomenon is shifting. This shift has the potential to impact not only the fate of these asylum seekers but also the Chinese population residing legally in the US.
+
+
+## How the Public Perceives the Influx
+
+To gauge public opinion on this emerging crisis, I have amassed around 15,000 comments from US internet users. These comments, posted in response to news coverage of this situation, present an opportunity to examine firsthand how this dramatic influx is perceived by the public.
+
+
+```{=html}
+<iframe src="https://zj117.shinyapps.io/comment_emo/" style="border: none; width: 800px; height: 800px"></iframe>
+
+```
+
+
+The analysis of the polar chart revealed consistent emotional patterns across all media platforms, with a pronounced presence of 'anticipation' and a delicate equilibrium between 'positive' and 'negative' sentiments, particularly evident in the commentary on YouTube and TikTok. Newspaper comments, however, displayed a higher degree of positivity, indicating a distinct emotional trend within traditional media outlets. Interestingly, 'surprise' registered as a subdued emotion across the platforms, suggesting that despite the dynamic nature of social media discourse, users' reactions tend to be more predictable than one might assume.
+
+
+## What's next?
+In the context of online narratives in China, the notion of 'successful wiring'—a metaphor for successful emigration and integration abroad—is often met with skepticism. A prevalent view amongst many Chinese netizens is that if one cannot thrive in China, success is equally unattainable in the United States. However, this perspective fails to consider the increasingly significant role Chinese emigrants play in American politics and the forthcoming elections, where they are often portrayed as both a danger and a resourceful entity, encompassing spies and military personnel. For these individuals, 'successful wiring' may not represent a final destination but rather the beginning of a longer and more arduous journey, filled with unforeseen challenges and hardships. The path they navigate is complex, leading to a future that unfolds in unexpected ways, far beyond the initial act of emigration.

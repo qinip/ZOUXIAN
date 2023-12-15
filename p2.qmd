@@ -1,0 +1,16 @@
+---
+title: "THE END OF TREKKING"
+fig-cap-location: bottom
+---
+
+![The long route to walk](rcs/zouxian2_wsj.png){width=80%}
+
+## The Unexpected Influx
+
+The surge of Chinese migrants entering the United States through the Mexican border has reached unprecedented levels, leading to heightened national security concerns in the United States. Over 24,000 Chinese citizens were apprehended at the U.S-Mexico border during the 2023 fiscal year, marking a drastic increase from the 1,970 arrests that took place in the fiscal year prior, and significantly up from 2021 when only 323 Chinese nationals crossed the border during the height of pandemic travel bans and lockdowns. As the Chinese government continues to exercise strict control over its citizens, particularly in the wake of the pandemic, the influx of Chinese migrants is projected to continue, further escalating concerns of potential national security risks.
+
+
+```{=html}
+<iframe src="https://zj117.shinyapps.io/problem-set-3-app/" style="border: none; width: 800px; height: 800px"></iframe>
+
+```

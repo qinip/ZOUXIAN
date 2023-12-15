@@ -1,0 +1,12 @@
+name: comment_emo
+title: comment_emo
+username: zj117
+account: zj117
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10803196
+bundleId: 8051880
+url: https://zj117.shinyapps.io/comment_emo/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
