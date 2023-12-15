@@ -3,7 +3,7 @@ title: "THE END OF TREKKING"
 fig-cap-location: bottom
 ---
 
-![The long route to walk](rcs/zouxian2_wsj.png){width=80%}
+![The long route to walk](rcs/zouxian2_wsj.jpeg){width=80%}
 
 ## The Unexpected Influx
 
