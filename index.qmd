@@ -2,7 +2,7 @@
 title: "WHAT IS *ZOUXIAN*?"
 about:
   template: broadside
-  image: /rcs/zouxian1_nyt_m.jpeg
+  image: rcs/zouxian1_nyt_m.jpeg
 ---
 
 ```{=html}
