@@ -5,7 +5,7 @@ format:
     code-fold: true
 execute: 
   warning: false
-  embed-resources: true
+  embed-resources: false
 ---
 
 ```{r setup, include=FALSE}
@@ -63,7 +63,7 @@ trends$Date <- gsub("-(\\d)$", "-0\\1", trends$Date)
 trends$Date <- as.yearmon(trends$Date, "%Y-%m")
 breaks <- seq(min(trends$Date), max(trends$Date), by = 4/12)
 
-ggplot(trends, aes(x = Date)) +
+p <- ggplot(trends, aes(x = Date)) +
   geom_point(aes(y = Search_Emigrate, color = 'Search_Emigrate'), size = 1.5 ) +
   geom_line(aes(y = Search_Emigrate, color = 'Search_Emigrate'), size = 1) +
   geom_point(aes(y = Search_Zouxian, color = 'Search_Zouxian'), size = 1.5 ) +
@@ -89,7 +89,7 @@ ggplot(trends, aes(x = Date)) +
         legend.spacing.y = unit(0, "cm") 
         ) +        
   scale_color_manual(values = c('Search_Emigrate' = 'darkblue', 'Search_Zouxian' = 'darkorange'))
-
+p
 ```
 ## Reasons to "Rùn" 
 
