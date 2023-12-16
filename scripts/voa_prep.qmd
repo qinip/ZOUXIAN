@@ -1,8 +1,3 @@
----
-title: "voa_prep"
-format: html
----
-
 ## Code to topic modeling VOA interview transcripts
 
 ```{r}
