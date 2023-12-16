@@ -5,7 +5,7 @@ format:
     code-fold: true
 execute: 
   warning: false
-  self_contained: false
+  embed-resources: true
 ---
 
 ```{r setup, include=FALSE}
